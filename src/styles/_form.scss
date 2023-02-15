@@ -1,0 +1,215 @@
+.form {
+  &__item {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% / 3 - 32px);
+    position: relative;
+    @include medium {
+      width: 100%;
+      margin-bottom: 32px;
+    }
+    @include small {
+      margin-bottom: 25px;
+    }
+    &--total {
+      @include medium {
+        width: 50%;
+      }
+    }
+  }
+  &__inputs {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 43px;
+    @include medium {
+      flex-direction: column;
+      margin-bottom: 35px;
+    }
+    @include small {
+      margin-bottom: 16px;
+    }
+  }
+  &__input {
+    border: none;
+    background: transparent;
+    font-family: 'Nekst';
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 36px;
+    color: $pressed;
+    width: auto;
+    min-width: 1ch;
+    @include large {
+      font-size: 26px;
+    }
+    @include medium {
+      width: 100%;
+      font-size: 30px;
+    }
+    @include small {
+      font-size: 22px;
+    }
+    &--percent {
+      padding: 16px 17px;
+      background: #ebebec;
+      border-radius: 16px;
+      position: absolute;
+      right: 7px;
+      top: 50%;
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+    }
+    &--total {
+      font-size: 54px;
+      color: #333333;
+      max-width: 100%;
+      @include large {
+        font-size: 30px;
+      }
+      @include medium {
+        font-size: 44px;
+      }
+      @include small {
+        font-size: 24px;
+      }
+    }
+  }
+  &__total {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    @include medium {
+      flex-wrap: wrap;
+    }
+    @include small {
+      flex-direction: column;
+    }
+  }
+}
+
+.input {
+  &__title {
+    font-family: 'Gilroy';
+    font-weight: 400;
+    font-size: 16px;
+    color: $pressed;
+    margin-bottom: 25px;
+    @include small {
+      margin-bottom: 8px;
+    }
+  }
+  &__label {
+    position: relative;
+    padding: 16px 24px;
+    border: 2px solid transparent;
+    display: flex;
+    justify-content: space-between;
+    background-color: $passiveInput;
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+    &:focus-within {
+      border: 2px solid $passiveInput;
+      background-color: transparent;
+    }
+    & span {
+      font-family: 'Nekst';
+      font-weight: 900;
+      font-size: 30px;
+      color: $pressed;
+      @include large {
+        font-size: 26px;
+      }
+      @include small {
+        font-size: 22px;
+      }
+    }
+    &--total {
+      background-color: transparent;
+    }
+    @include large {
+      padding: 12px 10px;
+    }
+    @include medium {
+      padding: 16px 24px;
+    }
+    @include small {
+      padding: 20px;
+    }
+  }
+  &__range {
+    position: absolute;
+    bottom: 2px;
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+  }
+  &__progressBar {
+    height: 1px;
+    background: $passive;
+    position: absolute;
+    width: 100%;
+  }
+}
+
+.form__input--percent span {
+  font-size: 20px;
+}
+
+.buttonWrapper {
+  display: flex;
+  justify-content: flex-end;
+  @include medium {
+    width: 50%;
+    margin-bottom: 0;
+  }
+  @include small {
+    width: 100%;
+  }
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='range'] {
+  -webkit-appearance: none;
+  width: 100%;
+  background: $inputRange;
+  height: 1px;
+  position: absolute;
+}
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  background: $passive;
+  border-radius: 50%;
+  cursor: pointer;
+}
+input[type='range']::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  background: $passive;
+  border-radius: 50%;
+  cursor: pointer;
+}
+input[type='range']::-ms-thumb {
+  width: 16px;
+  height: 16px;
+  background: $passive;
+  border-radius: 50%;
+  cursor: pointer;
+}

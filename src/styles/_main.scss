@@ -1,0 +1,40 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: unset;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0px 47px;
+  max-width: 1440px;
+  height: 100vh;
+  @include medium {
+    padding: 64px 36px;
+    height: 100%;
+  }
+  @include small {
+    padding: 20px;
+  }
+}
+
+.leasing {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  &__title {
+    font-family: 'Nekst';
+    font-size: 54px;
+    line-height: 90%;
+    margin-bottom: 30px;
+    @include medium {
+      margin-bottom: 45px;
+    }
+    @include small {
+      font-size: 34px;
+      margin-bottom: 30px;
+    }
+  }
+}
